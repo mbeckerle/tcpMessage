@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:fn="http://www.w3.org/2005/xpath-functions"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+  xmlns:tcpHdr="urn:io.github.dfdlschemas.tcpMessage"
+  targetNamespace="urn:io.github.dfdlschemas.tcpMessage"
+  elementFormDefault="unqualified">
+
+  <include schemaLocation="/io/github/dfdlschemas/tcpMessage/xsd/baseFormat.dfdl.xsd" />
+
+  <!-- Just for testing the content is just bytes -->
+
+  <simpleType name="tcpContentType" dfdl:lengthKind="delimited" dfdl:encoding="ISO-8859-1">
+    <restriction base="xs:hexBinary"/>
+  </simpleType>
+
+</schema>
