@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tcpHdr:message   xmlns:tcpHdr="urn:io.github.dfdlschemas.tcpMessage">
+<message>
   <data><content>DEADBEEF</content></data>
-</tcpHdr:message>
+</message>

@@ -19,8 +19,6 @@
     </appinfo>
   </annotation>
 
-  <element name="message" type="tcpHdr:messageType"/>
-
   <complexType name="messageType">
     <sequence>
       <sequence dfdl:hiddenGroupRef="tcpHdr:lengthGroup"/>

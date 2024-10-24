@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
+  xmlns:tcpHdr="urn:io.github.dfdlschemas.tcpMessage"
+  elementFormDefault="unqualified">
+
+  <xs:import
+    namespace="urn:io.github.dfdlschemas.tcpMessage"
+    schemaLocation="/io/github/dfdlschemas/tcpMessage/xsd/tcpMessageType.dfdl.xsd"/>
+
+  <xs:annotation>
+    <xs:appinfo source="http://www.ogf.org/dfdl/">
+      <dfdl:format ref="tcpHdr:baseFormat"/>
+    </xs:appinfo>
+  </xs:annotation>
+
+  <xs:element name="message" type="tcpHdr:messageType"/>
+
+</xs:schema>
