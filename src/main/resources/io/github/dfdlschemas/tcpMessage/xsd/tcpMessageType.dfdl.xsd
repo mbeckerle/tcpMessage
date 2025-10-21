@@ -4,8 +4,8 @@
   xmlns="http://www.w3.org/2001/XMLSchema"
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:dfdl="http://www.ogf.org/dfdl/dfdl-1.0/"
-  xmlns:tcpHdr="urn:io.github.dfdlschemas.tcpMessage"
-  targetNamespace="urn:io.github.dfdlschemas.tcpMessage"
+  xmlns:tcpHdr="urn:dfdlschemas.github.io:schema:dfdl:tcpMessage:tcpHdr"
+  targetNamespace="urn:dfdlschemas.github.io:schema:dfdl:tcpMessage:tcpHdr"
   elementFormDefault="unqualified">
 
   <include schemaLocation="baseFormat.dfdl.xsd"/>
@@ -14,8 +14,7 @@
   <annotation>
     <appinfo source="http://www.ogf.org/dfdl/">
       <dfdl:format ref="tcpHdr:baseFormat"/>
-      <dfdl:defineVariable name="maxLength" type="xs:unsignedInt"
-                           defaultValue="65535"/><!-- see also maxInclusive facet below which should match -->
+
     </appinfo>
   </annotation>
 
@@ -47,15 +46,9 @@
        named 'content' which is needed to avoid circularity between the outputValueCalc on length
        and the dfdl:length expression on the 'data' element.
        -->
-      <element name="length"
+      <element name="length" type="xs:unsignedInt"
                dfdl:alignment="1" dfdl:alignmentUnits="bytes"
-               dfdl:outputValueCalc='{ dfdl:valueLength(../data/content, "bytes" ) }'>
-        <simpleType>
-          <restriction base="xs:unsignedInt">
-            <maxInclusive value="65535"/>
-          </restriction>
-        </simpleType>
-      </element>
+               dfdl:outputValueCalc='{ dfdl:valueLength(../data/content, "bytes" ) }'/>
       <sequence>
         <annotation>
           <appinfo source="http://www.ogf.org/dfdl/">

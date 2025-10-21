@@ -9,7 +9,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   defaultRoundTrip="onePass">
 
-  <parserTestCase name="test_tcpMessage_01" root="message" model="io/github/dfdlschemas/tcpMessage/xsd/tcpMessage.dfdl.xsd">
+  <parserTestCase name="test_tcpMessage_01" root="message" model="com/example/xsd/message.dfdl.xsd">
     <document>
       <documentPart type="file">test_01.dat</documentPart>
     </document>

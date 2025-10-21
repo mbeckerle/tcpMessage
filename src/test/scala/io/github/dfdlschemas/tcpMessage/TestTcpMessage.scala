@@ -8,7 +8,7 @@ object TestTcpMessage {
   lazy val runner = Runner("/io/github/dfdlschemas/tcpMessage/", "TestTcpMessage.tdml")
 
   @AfterClass def shutDown: Unit = {
-    runner.reset
+    runner.reset()
   }
 }
 
